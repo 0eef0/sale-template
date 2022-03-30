@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+    <body>
+        <!-- Login to admin panel -->
+        <form id="login" method="post" action="/users/login">
+            <h1>Brand Name</h1>
+            <br>
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" alt="Brand Logo">
+            <br>
+            <section>
+                <label for="loginEmail">Username:</label>
+                <br>
+                <input type="text" id="loginEmail" name="username">
+            </section>
+            <br>
+            <section>
+                <label for="loginPass">Password:</label>
+                <br>
+                <input type="password" id="loginPass" name="password" title="password">
+            </section>
+            <button type="submit">Login</button>
+    
+            <p class="form-error">There Has Been an Error</p>
+        </form>
+
+        <!-- Takes you back to main page-->
+        <a id="mainPgBtn" href="/">Back to Main Page</a>
+    </body>
+</html>

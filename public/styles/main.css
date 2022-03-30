@@ -1,0 +1,751 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+main,
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img,
+object,
+embed {
+  max-width: 100%;
+  height: auto;
+}
+
+html {
+  overflow-y: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #222;
+  cursor: help;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+
+td {
+  font-weight: normal;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  word-wrap: break-word;
+}
+
+input [type=radio] {
+  vertical-align: text-bottom;
+}
+
+input [type=checkbox] {
+  vertical-align: bottom;
+}
+
+.ie7 input [type=checkbox] {
+  vertical-align: baseline;
+}
+
+.ie6 input[type=checkbox] {
+  vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+  font-size: 99%;
+}
+
+small {
+  font-size: 99%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+}
+
+sup {
+  top: -0.05em;
+}
+
+sub {
+  bottom: -0.025em;
+}
+
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+  cursor: pointer;
+}
+
+button,
+input[type=button] {
+  width: auto;
+  overflow: hidden;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Other Colors used */
+html {
+  margin-top: 3.5rem;
+}
+
+body {
+  font-family: "Roboto", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+}
+
+/* Other Colors used */
+div.homeSummary {
+  background-color: #fff;
+  width: clamp(80%, 70%, 2000px);
+  padding: 1rem;
+  box-shadow: 5px 5px 5px 0px #f00;
+  margin-top: 15vh;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 5vh;
+}
+div.homeSummary img {
+  width: 50%;
+  min-width: 200px;
+  float: left;
+  clear: both;
+  margin: 1rem;
+}
+div.homeSummary p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+div#selling {
+  width: 70%;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+}
+div#selling h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+div#selling div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+div#selling div p {
+  font-size: 1rem;
+  width: 33%;
+}
+div#selling div img:first-child {
+  width: 33%;
+  margin-right: 1rem;
+  object-fit: contain;
+}
+div#selling div img:last-child {
+  width: 33%;
+  margin-left: 1rem;
+  object-fit: contain;
+}
+@media only screen and (max-width: 768px) {
+  div#selling div {
+    flex-wrap: wrap;
+  }
+  div#selling div p,
+div#selling div img {
+    width: 100% !important;
+  }
+  div#selling div img {
+    margin: 0 !important;
+  }
+}
+
+div#staff {
+  width: 70%;
+  margin: 5vh auto 20vh auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+}
+div#staff h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+div#staff div#members {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+div#staff div#members div.member {
+  min-width: 200px;
+  width: 25%;
+  border-left: 1px solid #f00;
+  border-right: 1px solid #f00;
+  padding: 1rem;
+}
+div#staff div#members div.member img {
+  height: 80%;
+  display: block;
+  margin-left: auto;
+}
+div#staff div#members div.member h2 {
+  text-align: center;
+  font-size: 1.25rem;
+  color: #333;
+}
+div#staff div#members div.member p {
+  font-size: 1rem;
+}
+
+div#products {
+  width: 90%;
+  margin: 0 auto 20vh auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+div#products div.product {
+  width: 25%;
+  height: 40vh;
+  min-width: 200px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+  overflow: hidden;
+}
+div#products div.product img {
+  height: 100%;
+  object-fit: cover;
+}
+div#products div.product h2 {
+  color: #f00;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  position: relative;
+  top: -100%;
+  left: 0;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+form#storeProducts {
+  display: block;
+  margin: 0 auto 20vh auto;
+  width: 80%;
+  background-color: #fff;
+  padding: 1rem;
+  color: #333;
+  box-shadow: 5px 5px 5px 0px #f00;
+}
+form#storeProducts input[type=text],
+form#storeProducts input[type=tel],
+form#storeProducts input[type=email],
+form#storeProducts input[type=date],
+form#storeProducts select {
+  background-color: rgba(34, 34, 34, 0.1);
+  border-bottom: 2px solid #f00;
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  font-size: 1.25rem;
+  transition: border-bottom 0.3s;
+  margin-bottom: 1vh;
+}
+form#storeProducts input[type=text]:focus,
+form#storeProducts input[type=tel]:focus,
+form#storeProducts input[type=email]:focus,
+form#storeProducts input[type=date]:focus,
+form#storeProducts select:focus {
+  border-bottom: 4px solid #f00;
+}
+form#storeProducts div.storeProduct {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.3rem;
+  border-bottom: 2px solid #f00;
+}
+form#storeProducts div.storeProduct div.productImg {
+  width: 10vh;
+  height: 10vh;
+  min-width: 75px;
+  min-height: 75px;
+}
+form#storeProducts div.storeProduct div.productImg img {
+  height: 100%;
+  object-fit: cover;
+}
+form#storeProducts div.storeProduct input {
+  width: 3rem;
+  height: 2rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  border: 2px solid #f00;
+}
+form#storeProducts div.storeProduct:first-of-type {
+  border-top: 2px solid #f00;
+}
+form#storeProducts button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  border-radius: 1rem;
+}
+
+form#login {
+  position: relative;
+  width: clamp(350px, 40%, 500px);
+  background-color: #f5f6fa;
+  box-shadow: 5px 5px 5px 0px #f00;
+  padding: 1rem;
+  height: 50vh;
+  min-height: 350px;
+  max-height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+}
+form#login h1 {
+  text-align: center;
+}
+form#login img {
+  width: 10%;
+  min-width: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+form#login section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+form#login section label {
+  width: 100%;
+  text-align: center;
+}
+form#login section input {
+  padding: 0.5rem;
+  width: 50%;
+  min-width: 150px;
+  border-radius: 2rem;
+  border: 2px solid #f00;
+}
+form#login button {
+  position: absolute;
+  border-radius: 2rem;
+  top: auto;
+  right: 35%;
+  left: 35%;
+  bottom: 10px;
+  padding: 1rem;
+  width: 30%;
+  background-color: #333;
+  color: #fff;
+}
+form#login .form-error {
+  display: none;
+  visibility: hidden;
+  text-align: center;
+  padding: 2rem 0.5rem;
+}
+@media only screen and (max-width: 760px) {
+  form#login h1 {
+    font-size: 1rem;
+  }
+  form#login button {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+  }
+}
+
+#mainPgBtn,
+#mainPgBtn:visited {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #f00;
+  text-decoration: none;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+}
+
+form#newProductForm {
+  width: 90%;
+  margin: 3vh auto;
+  background-color: #fff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 5px 0px #f00;
+}
+form#newProductForm input {
+  background-color: rgba(34, 34, 34, 0.1);
+  border-bottom: 2px solid #f00;
+  padding: 1rem;
+  width: 100%;
+  outline: none;
+  font-size: 1.25rem;
+  transition: border-bottom 0.3s;
+  margin-bottom: 1vh;
+}
+form#newProductForm input:focus {
+  border-bottom: 4px solid #f00;
+}
+form#newProductForm button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+div#adminProducts {
+  width: 90%;
+  margin: 0 auto 20vh auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+div#adminProducts div.product {
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+div#adminProducts div.product p {
+  margin: 0 2rem;
+}
+div#adminProducts div.product div.btnPanel a {
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+div#adminSales {
+  margin-bottom: 10vh;
+}
+div#adminSales div.sale {
+  width: 90%;
+  min-height: 10vh;
+  margin: 20px auto;
+  padding: 1rem;
+  gap: 30px;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+  overflow: hidden;
+}
+div#adminSales div.sale div.salePurchases {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+div#adminSales div.sale:first-child {
+  margin-top: 0;
+}
+div#adminSales div.sale button {
+  display: block;
+  margin: 1vh 10px 0 auto;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav#navbar {
+  position: fixed;
+  bottom: -100%;
+  left: 15%;
+  width: 70%;
+  height: max-content;
+  background-color: #f00;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2rem 2rem 0 0;
+  overflow: hidden;
+  border: 5px solid #333;
+  border-bottom: none;
+  transition: bottom 0.3s;
+  color: #fff;
+  z-index: 1000;
+}
+nav#navbar div {
+  position: fixed;
+  bottom: 1rem;
+  padding: 0.5rem 10vw;
+  width: max-content;
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s;
+  border-bottom: 5px solid #f00;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #f00;
+}
+nav#navbar div img {
+  height: 2rem;
+}
+nav#navbar div h1 {
+  font-size: 2rem;
+}
+nav#navbar ul {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+nav#navbar ul li {
+  flex-grow: 1;
+  width: max-content;
+  min-width: 200px;
+  height: max-content;
+  display: inherit;
+  align-items: inherit;
+  transition: background-color 0.3s;
+}
+nav#navbar ul li a,
+nav#navbar ul li a:visited {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+}
+nav#navbar ul li:hover {
+  background-color: rgba(51, 51, 51, 0.25);
+}
+nav#navbar ul li form {
+  width: 100%;
+}
+nav#navbar ul li form button {
+  width: 100%;
+  background-color: transparent;
+  color: inherit;
+  font-size: 2rem;
+}
+nav#navbar:hover, nav#navbar.scrolled {
+  bottom: 0;
+}
+nav#navbar:hover div, nav#navbar.scrolled div {
+  opacity: 0;
+  z-index: -1;
+}
+
+div.carousel {
+  position: relative;
+  margin-top: 3vh;
+  margin-right: auto;
+  margin-left: auto;
+  width: clamp(80%, 70%, 2000px);
+  height: 80vh;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 5px 5px 5px 0px #f00;
+}
+div.carousel i.arrow {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  font-size: 2rem;
+  color: #fff;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+div.carousel i.arrow:hover {
+  color: #f00;
+  mix-blend-mode: normal;
+}
+div.carousel i.arrow.leftArrow {
+  left: 1vw;
+}
+div.carousel i.arrow.rightArrow {
+  right: 1vw;
+  left: auto;
+  text-align: right;
+}
+div.carousel div.carouselImages .carouselImg {
+  position: absolute;
+  top: calc(50% - 2rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: calc(100% - 2rem - 3vh);
+  opacity: 0;
+  transition: opacity 0.75s;
+  object-fit: cover;
+}
+div.carousel div.carouselImages .carouselImg.activeImg {
+  opacity: 1;
+}
+div.carousel div.carouselBtnPanel {
+  position: absolute;
+  bottom: 0;
+  height: 10%;
+  padding: 1rem;
+  background-color: transparent;
+  left: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+div.carousel div.carouselBtnPanel button.carouselBtn {
+  flex-grow: 0.5;
+  margin: 0 0.25rem;
+  height: 3vh;
+  background-color: #949494;
+  transition: background-color 1s;
+}
+div.carousel div.carouselBtnPanel button.carouselBtn.activeBtn {
+  background-color: #f00;
+}
+div.carousel div.carouselBtnPanel button.carouselBtn:first-child {
+  border-radius: 1rem 0 0 1rem;
+}
+div.carousel div.carouselBtnPanel button.carouselBtn:last-child {
+  border-radius: 0 1rem 1rem 0;
+}
+
+footer#footer {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 0.25);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5vh;
+}
+footer#footer .title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #f00;
+}
+footer#footer .link {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+footer#footer .link a,
+footer#footer .link a:visited {
+  color: inherit;
+  text-decoration: none;
+}
+footer#footer .link a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('../partials/nav.ejs')%>
+
+    <!-- what you are selling -->
+    <div id="selling">
+        <h1>What are we selling?</h1>
+        <div>
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" alt="placeholder">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto pariatur et ipsa inventore suscipit dolore necessitatibus libero est maxime amet, numquam dolorum aut ullam eaque nisi. Temporibus sapiente facere delectus corrupti similique, harum voluptate sint magni porro necessitatibus. Nemo, tempora accusamus. Non, fuga! Beatae iusto alias quos accusamus nesciunt laboriosam.</p>
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                alt="placeholder">
+        </div>
+    </div>
+
+    <!-- people selling things -->
+    <div id="staff">
+        <h1>Our Staff/Officers</h1>
+        <div id="members">
+            <% for(var i=0; i < people.length; i++) { %>
+                <div class="member">
+                    <img src="<%= people[i].img %>" alt="">
+                    <h2><%= people[i].name %></h2>
+                    <p><%= people[i].desc %></p>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
+
+    <!-- Flips the navbar up when scrolled to bottom -->
+    <script src="./js/nav.js"></script>
+</body>
+</html>

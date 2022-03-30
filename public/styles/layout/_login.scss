@@ -1,0 +1,87 @@
+form#login {
+  position: relative;
+  width: clamp(350px, 40%, 500px);
+  background-color: #f5f6fa;
+  box-shadow: 5px 5px 5px 0px $clr-primary;
+  padding: 1rem;
+  height: 50vh;
+  min-height: 350px;
+  max-height: 400px;
+  margin: {
+    left: auto;
+    right: auto;
+    top: 10vh;
+  }
+  h1 {
+    text-align: center;
+    //font-size: $scalable-text-font;
+  }
+  img {
+    width: 10%;
+    min-width: 30px;
+    display: block;
+    margin: {
+      left: auto;
+      right: auto;
+    }
+  }
+  section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    label {
+      width: 100%;
+      text-align: center;
+    }
+    input {
+      padding: 0.5rem;
+      width: 50%;
+      min-width: 150px;
+      border-radius: 2rem;
+      border: 2px solid $clr-primary;
+    }
+  }
+  button {
+    position: absolute;
+    border-radius: 2rem;
+    top: auto;
+    right: 35%;
+    left: 35%;
+    bottom: 10px;
+    padding: 1rem;
+    width: 30%;
+    background-color: $dark-background;
+    color: $clr-white;
+  }
+  .form-error {
+    display: none;
+    visibility: hidden;
+    text-align: center;
+    padding: 2rem 0.5rem;
+  }
+  @media only screen and (max-width: 760px) {
+    & {
+      h1 {
+        font-size: 1rem;
+      }
+      button {
+        width: 80%;
+        left: 10%;
+        right: 10%;
+      }
+    }
+  }
+}
+
+#mainPgBtn,
+#mainPgBtn:visited {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: $clr-primary;
+  text-decoration: none;
+  color: $clr-white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+}

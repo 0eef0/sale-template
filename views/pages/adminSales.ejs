@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('../partials/adminNav.ejs')%>
+
+    <!-- Iterates through all purchases -->
+    <div id="adminSales">
+        <% for(var i=0; i < purchases.length; i++) { %>
+            <div class="sale">
+                <% for (const property in purchases[i].userDetails) { %>
+                    <!-- If the field isn't items, then it simpler displays the field -->
+                    <% if(property != 'purchasedItems') { %>
+                        <p><strong><%= property %>:</strong> <%= purchases[i].userDetails[property] %></p><br>
+                    <% } else { %>
+                        <!-- If it is items, then it iterates through the list of items -->
+                        <% let total=0 %>
+                        <div class="salePurchases">
+                            <p><strong>Purchased items:</strong></p>
+                            <% for (let j = 0; j < purchases[i].userDetails.purchasedItems.length; j++) { %>
+                                <% if(purchases[i].userDetails.purchasedItems[j].price * purchases[i].userDetails.purchasedItems[j].quantity !==0) { %>
+                                    <p><%= purchases[i].userDetails.purchasedItems[j].name %> x <%= purchases[i].userDetails.purchasedItems[j].quantity %> ($<%= purchases[i].userDetails.purchasedItems[j].price * purchases[i].userDetails.purchasedItems[j].quantity %>)</p>
+                                    <% total += purchases[i].userDetails.purchasedItems[j].price * purchases[i].userDetails.purchasedItems[j].quantity %>
+                                <% } %>
+                            <% } %>
+                            <!-- total cost -->
+                            <p>Total: $<%= total.toFixed(2) %></p>
+                        </div>
+                    <% } %>
+                <% } %>
+                <button onclick="deletePurchase('<%= purchases[i]._id %>')">Delete</button>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Flips the navbar up when scrolled to bottom -->
+    <script src="./js/nav.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/purchases.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+    <body>
+        <!-- Navbar -->
+        <%- include('../partials/nav.ejs')%>
+
+        <!-- All store products -->
+        <form id="storeProducts">
+            <% for(var i=0; i < purchaseFields.length; i++) { %>
+                <% if(purchaseFields[i].type == 'select'){ %>
+                    <select id="<%= purchaseFields[i].id %>" class="orderForm" required>
+                        <option value="Placeholder">[Select <%= purchaseFields[i].name %>]</option>
+                        <% for(var j=0; j < purchaseFields[i].options.length; j++) { %>
+                            <option value="<%= purchaseFields[i].options[j] %>"><%= purchaseFields[i].options[j] %></option>
+                        <% } %>
+                    </select>
+                <% } else{ %>
+                    <input id="<%= purchaseFields[i].id %>" type="<%= purchaseFields[i].type %>" placeholder="<%= purchaseFields[i].name %>" class="orderForm" required>
+                <% } %>
+            <% } %>
+
+            <% for(var i=0; i < products.length; i++) { %>
+                <div class="storeProduct">
+                    <div class="productImg">
+                        <img src="<%= products[i].productImg %>" alt="">
+                    </div>
+                    <h2><%= products[i].productName %></h2>
+                    <h2>$<%= products[i].productPrice %></h2>
+                    <input type="number" value="0" min="0" data-price="<%= products[i].productPrice %>" id="<%= products[i].productName %>" class="orderFormQty">
+                </div>
+            <% } %>
+            <br>
+            <button>Submit</button>
+        </form>
+
+
+        <!-- Footer -->
+        <%- include('../partials/footer.ejs') %>
+
+        <!-- Flips the navbar up when scrolled to bottom -->
+        <script src="./js/nav.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="./js/purchases.js"></script>
+        <script>
+            document.getElementById('storeProducts').addEventListener('submit', (e) => {
+                e.preventDefault();
+                makePurchase();
+            });
+        </script>
+    </body>
+</html>

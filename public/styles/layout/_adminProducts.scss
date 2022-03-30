@@ -1,0 +1,67 @@
+form#newProductForm {
+  width: 90%;
+  margin: 3vh auto;
+  background-color: $clr-secondary;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 5px 5px 5px 0px $clr-primary;
+
+  input {
+    background-color: rgba($color: $clr-black, $alpha: 0.1);
+    border-bottom: 2px solid $clr-primary;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.25rem;
+    transition: border-bottom 0.3s;
+    margin-bottom: 1vh;
+    &:focus {
+      border-bottom: 4px solid $clr-primary;
+    }
+  }
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.3rem;
+    border-radius: 0.5rem;
+    background-color: $dark-background;
+    color: $clr-white;
+    text-decoration: none;
+  }
+}
+
+div#adminProducts {
+  width: 90%;
+  margin: 0 auto 20vh auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  div.product {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+    background-color: $clr-secondary;
+    box-shadow: 5px 5px 5px 0px $clr-primary;
+    overflow: hidden;
+    padding: 0.5rem;
+    p {
+      margin: 0 2rem;
+    }
+    div.btnPanel {
+      a {
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        background-color: $dark-background;
+        color: $clr-white;
+        text-decoration: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+footer#footer {
+  width: 100%;
+  height: 30vh;
+  background-color: rgba($color: $clr-white, $alpha: 0.25);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5vh;
+
+  .title {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $clr-primary;
+  }
+  .link {
+    font-size: 1rem;
+    color: rgba($color: $clr-white, $alpha: 0.5);
+    a,
+    a:visited {
+      color: inherit;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

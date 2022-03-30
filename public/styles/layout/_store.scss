@@ -1,0 +1,66 @@
+form#storeProducts {
+  display: block;
+  margin: 0 auto 20vh auto;
+  width: 80%;
+  background-color: $clr-secondary;
+  padding: 1rem;
+  color: $dark-background;
+  box-shadow: 5px 5px 5px 0px $clr-primary;
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  input[type="date"],
+  select {
+    background-color: rgba($color: $clr-black, $alpha: 0.1);
+    border-bottom: 2px solid $clr-primary;
+    padding: 1rem;
+    width: 100%;
+    outline: none;
+    font-size: 1.25rem;
+    transition: border-bottom 0.3s;
+    margin-bottom: 1vh;
+    &:focus {
+      border-bottom: 4px solid $clr-primary;
+    }
+  }
+
+  div.storeProduct {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+    border-bottom: 2px solid $clr-primary;
+    div.productImg {
+      width: 10vh;
+      height: 10vh;
+      min-width: 75px;
+      min-height: 75px;
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    input {
+      width: 3rem;
+      height: 2rem;
+      text-align: center;
+      border-radius: 0.5rem;
+      border: 2px solid $clr-primary;
+    }
+
+    &:first-of-type {
+      border-top: 2px solid $clr-primary;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: $dark-background;
+    color: $clr-white;
+    border-radius: 1rem;
+  }
+}

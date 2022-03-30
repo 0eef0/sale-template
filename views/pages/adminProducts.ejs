@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <%- include('../partials/adminNav.ejs')%>
+
+    <!-- Field to add new products -->
+    <form id="newProductForm">
+        <input id="productName" type="text" placeholder="Product Name">
+        <input id="productImg" type="text" placeholder="Product Image Link">
+        <input id="productPrice" type="number" placeholder="Product Price" step="0.01">
+        <button id="addNewProduct" type="submit">Submit</button>
+    </form>
+
+    <!-- All store products -->
+    <div id="adminProducts">
+        <% for(var i=0; i < products.length; i++) { %>
+            <div class="product">
+                <p>Product Name: <%= products[i].productName %></p>
+                <p>Product Image: <%= products[i].productImg %></p>
+                <p>Product Price: $<%= products[i].productPrice %></p>
+                <div class="btnPanel">
+                    <!-- <a href="/?id=<%= products[i]._id %>">Edit</a> -->
+                    <a onclick="deleteProduct('<%= products[i]._id %>')">Delete</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+
+    <!-- Flips the navbar up when scrolled to bottom -->
+    <script src="./js/nav.js"></script>
+    <!-- axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+        integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/adminProducts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+div#adminSales {
+  margin-bottom: 10vh;
+  div.sale {
+    width: 90%;
+    min-height: 10vh;
+    margin: 20px auto;
+    padding: 1rem;
+    gap: 30px;
+    background-color: $clr-secondary;
+    box-shadow: 5px 5px 5px 0px $clr-primary;
+    overflow: hidden;
+    div.salePurchases {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    &:first-child {
+      margin-top: 0;
+    }
+    button {
+      display: block;
+      margin: 1vh 10px 0 auto;
+      padding: 0.3rem;
+      border-radius: 0.5rem;
+      background-color: $dark-background;
+      color: $clr-white;
+      text-decoration: none;
+    }
+  }
+}

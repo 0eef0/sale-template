@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <link rel="stylesheet" href="./styles/main.css" type="text/css">
+    <title>Home Template</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <%- include('../partials/nav.ejs')%>
+
+    <!-- Image Gallery -->
+    <div class="carousel">
+        <!-- This is where you put images -->
+        <div class="carouselImages">
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                class="carouselImg activeImg" alt="Carousel 1">
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                class="carouselImg" alt="Carousel 2">
+            <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png"
+                class="carouselImg" alt="Carousel 3">
+        </div>
+        <!-- Carousel Buttons -->
+        <i class="fas fa-arrow-left arrow leftArrow" onclick="prevImg()">
+            <p class="reader"></p>
+        </i>
+        <i class="fas fa-arrow-right arrow rightArrow" onclick="nextImg()">
+            <p class="reader"></p>
+        </i>
+        <!-- This is where you put the buttons. Make sure the change functions are numbered accordingly -->
+        <div class="carouselBtnPanel">
+            <button class="carouselBtn activeBtn" onclick="carouselChange(0)" title="Carousel button 1">
+                <p class="reader"></p>
+            </button>
+            <button class="carouselBtn" onclick="carouselChange(1)" title="Carousel button 2">
+                <p class="reader"></p>
+            </button>
+            <button class="carouselBtn" onclick="carouselChange(2)" title="Carousel button 3">
+                <p class="reader"></p>
+            </button>
+        </div>
+    </div>
+
+    <!-- An image and synopsis of the seller -->
+    <div class="homeSummary">
+        <img src="https://www.gaithersburgdental.com/wp-content/uploads/2016/10/orionthemes-placeholder-image.png" alt="placeholder">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam sunt placeat amet eos quos aut incidunt odio veniam consequatur omnis? In ad expedita cupiditate doloremque consequuntur soluta dolorum illo! Incidunt eos natus excepturi eveniet nesciunt enim voluptate iste suscipit! Id explicabo omnis eaque nihil maxime quod vel quis porro consequuntur?</p>
+    </div>
+
+    <!-- Footer -->
+    <%- include('../partials/footer.ejs') %>
+
+    <!-- Carousel Functionality -->
+    <script src="./js/carousel.js"></script>
+
+    <!-- Flips the navbar up when scrolled to bottom -->
+    <script src="./js/nav.js"></script>
+</body>
+</html>

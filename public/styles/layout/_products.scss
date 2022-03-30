@@ -1,0 +1,31 @@
+div#products {
+  width: 90%;
+  margin: 0 auto 20vh auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  div.product {
+    width: 25%;
+    height: 40vh;
+    min-width: 200px;
+    background-color: $clr-secondary;
+    box-shadow: 5px 5px 5px 0px $clr-primary;
+    overflow: hidden;
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      color: $clr-primary;
+      background-color: rgba($color: #fff, $alpha: 0.5);
+      text-align: center;
+      position: relative;
+      top: -100%;
+      left: 0;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
